@@ -7,7 +7,7 @@ import View from 'ol/View.js';
 import TileLayer from 'ol/layer/Tile.js';
 import {OSM, TileDebug} from 'ol/source.js';
 
-import MapBoxLayer from '../src/MapBoxLayer.js';
+import OlMapLibreLayer from '../src/MapLibreLayer.js';
 
 const mapBoxStyle = 'https://vectortiles.geoportail.lu/styles/roadmap/style.json'
 
@@ -15,7 +15,7 @@ const osmSource = new OSM();
 
 window.map = new Map({
   layers: [
-    window.mbl = new MapBoxLayer({
+    window.mbl = new OlMapLibreLayer({
       style: mapBoxStyle,
       container: 'map'
     }),

@@ -1,15 +1,15 @@
 {
-  "name": "@geoblocks/mapboxlayer",
+  "name": "@geoblocks/ol-maplibre-layer",
   "version": "0.0.7",
-  "geoblocks_src": "src/MapBoxLayer.js",
-  "main": "dist/lib/mapboxlayer.js",
-  "module": "dist/lib/mapboxlayer.js",
+  "geoblocks_src": "src/ol-maplibre-layer.js",
+  "main": "dist/lib/ol-maplibre-layer.js",
+  "module": "dist/lib/ol-maplibre-layer.js",
   "files": [
     "/src",
     "/dist/lib"
   ],
   "scripts": {
-    "build-api": "microbundle --format es --entry src/MapBoxLayer.js",
+    "build-api": "microbundle --format es --entry src/ol-maplibre-layer.js",
     "build-demo": "parcel build --out-dir dist examples/*.html --public-url ./",
     "build": "npm run build-api; npm run build-demo",
     "lint": "eslint src/ examples",
@@ -20,15 +20,16 @@
     "> 1% and not IE > 0, Firefox ESR"
   ],
   "peerDependencies": {
-    "mapbox-gl": "~1.0",
     "ol": "~6.0"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
     "gh-pages": "^3.0.0",
-    "mapbox-gl": "^1.4.1",
     "microbundle": "^0.12.0",
     "ol": "^6.0.1",
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "maplibre-gl": "^1.13.0-rc.0"
   }
 }

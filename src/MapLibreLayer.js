@@ -2,7 +2,7 @@ import Layer from 'ol/layer/Layer'
 import {toDegrees} from 'ol/math';
 import {toLonLat} from 'ol/proj.js';
 
-import mapboxgl from 'mapbox-gl';
+import maplibre from 'maplibre-gl';
 
 /**
  * @typedef {Object} Options
@@ -31,10 +31,10 @@ export default class MapBox extends Layer {
     this.xyz_ = options.xyz;
 
     if (options.accessToken) {
-      mapboxgl.accessToken = options.accessToken;
+      maplibre.accessToken = options.accessToken;
     }
 
-    this.map_ = new mapboxgl.Map({
+    this.map_ = new maplibre.Map({
       container: options.container,
       style: options.style,
       attributionControl: false,
@@ -99,7 +99,7 @@ export default class MapBox extends Layer {
   }
 
   /**
-   * @return {mapboxgl.Style}
+   * @return {maplibre.Style}
    */
   getStyle() {
     return this.map_.getStyle();
